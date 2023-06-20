@@ -5,6 +5,8 @@ on:
   pull_request:
     branches: [main, master]
     
+name: R-CMD-check-all
+
 jobs:
     changes:
       runs-on: ubuntu-latest
@@ -24,6 +26,7 @@ jobs:
 
     # JOB to build and test each of modified packages
     build:
+      runs-on: ubuntu-latest
       needs: changes
       secrets: inherit
       strategy:
@@ -31,8 +34,7 @@ jobs:
           # Parse JSON array containing names of all filters matching any of changed files
           # e.g. ['package1', 'package2'] if both package folders contains changes
           package: ${{ fromJSON(needs.changes.outputs.packages) }}
-      runs-on: ubuntu-20.04
       steps:
-        - uses: ./.github/workflows/R-CMD-check.yaml
-          with: 
-            pkg-path: ${{ matrix.package }}
+      - uses: ./.github/workflows/R-CMD-check.yaml
+        with: 
+          pkg-path: ${{ matrix.package }}
