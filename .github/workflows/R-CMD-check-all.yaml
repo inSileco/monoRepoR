@@ -34,6 +34,7 @@ jobs:
         matrix:
           # see https://github.com/dorny/paths-filter
           package: ${{ fromJSON(needs.changes.outputs.packages) }}
+          max-parallel: 1
       uses: ./.github/workflows/R-CMD-check.yaml
       secrets: inherit
       with: 
