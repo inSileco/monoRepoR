@@ -50,6 +50,3 @@ jobs:
           lint_package(linters = with_defaults(object_name_linter("camelCase"), line_length_linter(160L), object_length_linter(length = 60L)))
         shell: Rscript {0}
         working-directory: ${{ inputs.pkg-path }}
-
-      - name: Build archive
-        run: R CMD build ${{ inputs.pkg-path }}
