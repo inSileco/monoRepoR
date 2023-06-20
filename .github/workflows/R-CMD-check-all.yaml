@@ -23,7 +23,7 @@ jobs:
         with:
           filters: |
             testpkg01: 'testpkg01/**'
-            testpkg02: 'testpkg01/**'
+            testpkg02: 'testpkg02/**'
 
     # JOB to build and test each of modified packages
     build:
