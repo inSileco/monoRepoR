@@ -22,7 +22,7 @@ jobs:
 
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          extra-packages: rcmdcheck
+          extra-packages: rcmdcheck, any::covr, any::goodpractice, any::lintr
           working-directory: ${{ inputs.pkg-path }}
 
       - uses: r-lib/actions/check-r-package@v2

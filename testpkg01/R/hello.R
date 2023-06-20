@@ -1,5 +1,5 @@
 #' Hello world
 #' @export 
 hello <- function() {
-    "Hello World!"
-} 
+    "Hello World 2!"
+}

@@ -32,8 +32,7 @@ jobs:
       if: ${{ needs.changes.outputs.packages != '[]' && needs.changes.outputs.packages != '' }}
       strategy:
         matrix:
-          # Parse JSON array containing names of all filters matching any of changed files
-          # e.g. ['package1', 'package2'] if both package folders contains changes
+          # see https://github.com/dorny/paths-filter
           package: ${{ fromJSON(needs.changes.outputs.packages) }}
       uses: ./.github/workflows/R-CMD-check.yaml
       secrets: inherit
