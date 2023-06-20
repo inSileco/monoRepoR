@@ -34,6 +34,7 @@ jobs:
           # e.g. ['package1', 'package2'] if both package folders contains changes
           package: ${{ fromJSON(needs.changes.outputs.packages) }}
       uses: ./.github/workflows/R-CMD-check.yaml
+      if: ${{ matrix.package }} != ""
       secrets: inherit
       with: 
         pkg-path: ${{ matrix.package }}
