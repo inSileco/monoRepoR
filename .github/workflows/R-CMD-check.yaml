@@ -15,7 +15,7 @@ jobs:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
       R_KEEP_PKG_SOURCE: yes
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - uses: r-lib/actions/setup-r@v2
         with:
           use-public-rspm: true
@@ -50,6 +50,3 @@ jobs:
           lint_package(linters = with_defaults(object_name_linter("camelCase"), line_length_linter(160L), object_length_linter(length = 60L)))
         shell: Rscript {0}
         working-directory: ${{ inputs.pkg-path }}
-
-      - name: Build archive
-        run: R CMD build ${{ inputs.pkg-path }}

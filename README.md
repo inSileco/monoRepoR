@@ -1,12 +1,14 @@
 # monoRepoR
-Test repo to apply the same worklows on several packages in a mono repo.
+
+Demo repo to apply the same worklows on several packages in a mono repo.
 
 
 ## Generating test packages
 
 ```R
 # create testpkg01
-usethis::create_package("testpkg01") # NB: this prompts a message that requires an answer
+## NB: the command line below prompts a message that requires an answer
+usethis::create_package("testpkg01")
 usethis::use_mit_license()
 devtools::load_all()
 devtools::document()
