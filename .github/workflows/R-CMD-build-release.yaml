@@ -18,6 +18,8 @@ jobs:
           use-public-rspm: true
       - name: build archives
         run: make rpkgs
+      - name: Create docker image 
+        run: make docker
 
   buildDocker:
     needs: buildRPkgs

@@ -20,6 +20,15 @@ jobs:
         with:
           use-public-rspm: true
 
+      - name: Install Oracle drivers 
+        run: |
+          apt -y install libaio1 libaio-dev
+          wget https://download.oracle.com/otn_software/linux/instantclient/19600/instantclient-basic-linux.x64-19.6.0.0.0dbru.zip -O oic_basic.zip && unzip oic_basic.zip && rm oic_basic.zip
+          wget https://download.oracle.com/otn_software/linux/instantclient/19600/instantclient-sdk-linux.x64-19.6.0.0.0dbru.zip -O oic_sdk.zip 
+          && unzip oic_sdk.zip && rm oic_sdk.zip
+          export OCI_LIB=$(pwd)/instantclient_19_6
+          export LD_LIBRARY_PATH=$(pwd)/instantclient_19_6
+
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           extra-packages: rcmdcheck, any::covr, any::goodpractice, any::lintr

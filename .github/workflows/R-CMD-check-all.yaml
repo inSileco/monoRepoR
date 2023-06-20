@@ -39,4 +39,3 @@ jobs:
       secrets: inherit
       with: 
         pkg-path: ${{ matrix.package }}
-
