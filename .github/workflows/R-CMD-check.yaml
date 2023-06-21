@@ -24,8 +24,7 @@ jobs:
         run: |
           sudo apt-get install -y libaio1 libaio-dev
           wget https://download.oracle.com/otn_software/linux/instantclient/19600/instantclient-basic-linux.x64-19.6.0.0.0dbru.zip -O oic_basic.zip && unzip oic_basic.zip && rm oic_basic.zip
-          wget https://download.oracle.com/otn_software/linux/instantclient/19600/instantclient-sdk-linux.x64-19.6.0.0.0dbru.zip -O oic_sdk.zip 
-          && unzip oic_sdk.zip && rm oic_sdk.zip
+          wget https://download.oracle.com/otn_software/linux/instantclient/19600/instantclient-sdk-linux.x64-19.6.0.0.0dbru.zip -O oic_sdk.zip && unzip oic_sdk.zip && rm oic_sdk.zip
           export OCI_LIB=$(pwd)/instantclient_19_6
           export LD_LIBRARY_PATH=$(pwd)/instantclient_19_6
 
