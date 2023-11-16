@@ -1,5 +1,5 @@
 #' Hello world
 #' @export
 hello_co2 <- function() {
-    head(datasets::CO2)
+    utils::head(datasets::CO2)
 }
