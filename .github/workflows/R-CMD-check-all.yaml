@@ -1,4 +1,3 @@
-# see https://github.com/dorny/paths-filter
 on:
   push:
     branches: [main, master]
