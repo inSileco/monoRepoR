@@ -1,10 +1,13 @@
 Package: testpkg01
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9007
+Title: CO2 head 
+Version: 0.0.9010
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+    person(given = "Kevin",
+           family = "Cazelles",
+           role = c("aut", "cre"),
+           email = "kevin.cazelles@insileco.io",
+           comment = c(ORCID = "0000-0001-6619-9874"))
+Description: Return the head of the CO2 dataset.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
