@@ -1,6 +1,8 @@
 # monoRepoR
+[![R-CMD-check-all](https://github.com/inSileco/monoRepoR/actions/workflows/R-CMD-check-all.yaml/badge.svg)](https://github.com/inSileco/monoRepoR/actions/workflows/R-CMD-check-all.yaml)
+[![build-and-release](https://github.com/inSileco/monoRepoR/actions/workflows/build-docker-container.yaml/badge.svg)](https://github.com/inSileco/monoRepoR/actions/workflows/build-docker-container.yaml)
 
-Demo repo to apply the same worklows on several packages in a mono repo.
+Demo repo to apply the same workflows on several R packages in a monorepo.
 
 
 ## Generating test packages
@@ -22,9 +24,3 @@ devtools::load_all()
 devtools::document()
 devtools::check()
 ```
-
-## Adding the workflows 
-
-1. [reusable workflow](https://docs.github.com/en/actions/using-workflows/reusing-workflows#creating-a-reusable-workflow)
-
-See https://github.com/r-lib/actions/tree/master/examples

@@ -7,6 +7,7 @@ on:
 name: R-CMD-check-all
 
 jobs:
+    # determine what needs to be checked
     changes:
       runs-on: ubuntu-latest
       permissions:
@@ -26,7 +27,7 @@ jobs:
               - 'testpkg01/R'
               - 'testpkg02/**'
 
-    # JOB to build and test each of modified packages
+    # Jbuild and test each of modified packages
     checkPackages:
       needs: changes
       # https://github.com/dorny/paths-filter/issues/66
