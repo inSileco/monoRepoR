@@ -24,3 +24,11 @@ devtools::load_all()
 devtools::document()
 devtools::check()
 ```
+
+## Docker 
+
+Docker image available at the following URL https://hub.docker.com/repository/docker/kevcaz/monorepor/general
+
+```
+docker push kevcaz/monorepor:v0.1.2
+```
