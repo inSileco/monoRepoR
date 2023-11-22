@@ -1,6 +1,6 @@
 Package: testpkg01
 Title: CO2 head 
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: 
     person(given = "Kevin",
            family = "Cazelles",
